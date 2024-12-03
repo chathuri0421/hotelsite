@@ -1,0 +1,109 @@
+.gallery-page {
+  position: relative;
+  overflow: hidden; /* Prevent overflow from the videos */
+}
+
+/* Video Container Styles */
+.video-container {
+  position: absolute; /* Absolutely positioned */
+  top: 0; /* Aligns to the top */
+  left: 50%; /* Centers the video */
+  transform: translateX(-50%); /* Centering the video horizontally */
+  width: 100%; /* Full width */
+}
+
+/* Background Video Styles */
+.background-video {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Cover entire area */
+  z-index: 0; /* Behind other elements */
+  filter: blur(5px); /* Apply blur effect */
+  opacity: 0.9; /* Adjust for desired transparency */
+}
+
+/* New Video Styles */
+.new-video {
+  position: relative; /* Positioned relative to the gallery page */
+  width: 80%; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px auto; /* Center the video with auto margins */
+  z-index: 1; /* In front of the background video */
+  display: block; /* Ensure the video is a block element */
+}
+.gallery-content {
+  position: relative; /* Position relative for stacking */
+  z-index: 2; /* Ensure content is above both videos */
+  max-width: 80%; /* Make the gallery width relative to the video */
+  margin: 20px auto; /* Center it horizontally */
+  text-align: center; /* Center-align the text */
+  margin-top:500px;
+}
+
+/* Gallery Title Styles - Centered over the new video with transparency */
+
+
+
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  grid-auto-rows: 200px; /* Adjust the height of each row */
+  gap: 10px; /* Space between images */
+  max-width: 100%; /* Ensure it doesn't exceed the parent container */
+}
+
+/* Gallery Item Styles */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* For specific image sizes to resemble the uploaded layout */
+.gallery-item:nth-child(1) {
+  grid-column: span 2; /* First image spans 2 columns */
+  grid-row: span 2;    /* First image spans 2 rows */
+}
+
+.gallery-item:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.gallery-item:nth-child(3) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.gallery-item:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.gallery-item:nth-child(5) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+/* Image Styles */
+.gallery-image {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Cover the area */
+  border-radius: 5px; /* Optional for rounded corners */
+}
+/* Image Styles - Add hover popup effect */
+.gallery-image {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Cover the area */
+  border-radius: 5px; /* Optional for rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for popup effect */
+}
+
+/* Popup effect on hover */
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1); /* Zoom the image slightly */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow for the popup effect */
+  z-index: 10; /* Bring the image forward */
+}

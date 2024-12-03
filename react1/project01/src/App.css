@@ -1,0 +1,15 @@
+.subscribe-button {
+  background-color: #5c94e0; /* Light blue background */
+  color: #f2f2f2; /* Button text color */
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.subscribe-button:hover {
+  background-color: #4a84c7; /* Darker shade on hover */
+}
